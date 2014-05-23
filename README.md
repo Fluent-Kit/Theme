@@ -1,4 +1,4 @@
-Asset
+Theme
 ========
 
 Simple Laravel Theme system
