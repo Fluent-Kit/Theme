@@ -1,7 +1,7 @@
 <?php 
 namespace FluentKit\Theme;
 
-use \Illuminate\View\FileViewFinder as ViewFinder 
+use \Illuminate\View\FileViewFinder as ViewFinder;
 
 class FileViewFinder extends ViewFinder
 {
