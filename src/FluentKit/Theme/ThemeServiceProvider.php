@@ -42,7 +42,7 @@ class ThemeServiceProvider extends ServiceProvider {
     	$loader = AliasLoader::getInstance();
 
 		//fluent aliases
-        $loader->alias('Theme', 'FluentKit\Facades\Theme');
+        $loader->alias('Theme', 'FluentKit\Theme\Facade');
 
         $app = $this->app;
 
