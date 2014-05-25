@@ -19,8 +19,15 @@ class FileViewFinder extends ViewFinder
         };
 
         $paths = array_map($generatePath, $this->paths);
+        
+        //fix for plugins
+        $generatePath2 = function ($path) use ($namespace) {
+            return "{$path}/plugins/{$namespace}";
+        };
 
-        return $this->findInPaths($view, array_merge($paths, $this->hints[$namespace]));
+        $paths2 = array_map($generatePath2, $this->paths);
+
+        return $this->findInPaths($view, array_merge($paths, $paths2, $this->hints[$namespace]));
     }
 
     /**
