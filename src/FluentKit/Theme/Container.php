@@ -88,6 +88,7 @@ class Container
         $this->app['events']->fire("fluentkit.theme.set: {$this->theme}");
 
         $paths = array_merge(array($this->getThemePath()), $paths);
+        \Config::set('view::paths', $paths);
         $viewFinder->setPaths($paths);
     }
 

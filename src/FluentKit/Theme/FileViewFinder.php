@@ -10,6 +10,7 @@ class FileViewFinder extends ViewFinder
      */
     protected function findNamedPathView($name)
     {
+        
         list($namespace, $view) = $this->getNamespaceSegments($name);
 
         // Prepend global view paths to namespace hints path. This would

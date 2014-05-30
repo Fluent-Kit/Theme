@@ -11,7 +11,7 @@ class ThemeServiceProvider extends ServiceProvider {
 	 *
 	 * @var bool
 	 */
-	protected $defer = true;
+	protected $defer = false;
 
     public function register()
     {
@@ -47,7 +47,7 @@ class ThemeServiceProvider extends ServiceProvider {
         $app = $this->app;
 
         //register theme
-        $app['fluentkit.theme']->setTheme('theme1');
+        $app['fluentkit.theme']->setTheme('default');
 
         // The theme is only booted when the first view is being composed.
         // This would prevent multiple theme being booted in the same
